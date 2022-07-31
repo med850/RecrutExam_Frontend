@@ -11,6 +11,8 @@ export class NavbarComponent implements OnInit {
   constructor(public login:LoginService) { }
 
   ngOnInit(): void {
+
+   // this.login.loginStatusSubject.asObservable().subscribe()
   }
 
 

@@ -21,6 +21,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './admin/welcome/welcome.component';
+
 
 
 
@@ -36,7 +41,10 @@ import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashbo
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    ProfileComponent,
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,8 @@ import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashbo
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

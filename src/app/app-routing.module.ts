@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddCategorieComponent } from './admin/add-categorie/add-categorie.component';
+import { AddQuizComponent } from './admin/add-quiz/add-quiz.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { UpdateQuizComponent } from './admin/update-quiz/update-quiz.component';
+import { ViewCategorieComponent } from './admin/view-categorie/view-categorie.component';
+import { ViewQuizesComponent } from './admin/view-quizes/view-quizes.component';
 import { WelcomeComponent } from './admin/welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +27,28 @@ const routes: Routes = [
             {
   path : '', component : WelcomeComponent
             }, 
+
+            {
+  path : 'categories', component : ViewCategorieComponent
+            }, 
+
+            {
+   path : 'add-categorie', component : AddCategorieComponent
+            },
+            
+            
+            {
+  path : 'quizes', component : ViewQuizesComponent
+            },
+
+
+            {
+  path : 'add-quiz', component : AddQuizComponent
+            },
+
+            {
+  path : 'quiz/:id', component : UpdateQuizComponent
+            },
           ],
 },
 { path : 'user-dashboard', component : UserDashboardComponent, pathMatch : 'full', canActivate:[NormalGuard]},

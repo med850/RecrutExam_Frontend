@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategorieComponent } from './admin/add-categorie/add-categorie.component';
+import { AddQuestionComponent } from './admin/add-question/add-question.component';
 import { AddQuizComponent } from './admin/add-quiz/add-quiz.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UpdateQuizComponent } from './admin/update-quiz/update-quiz.component';
 import { ViewCategorieComponent } from './admin/view-categorie/view-categorie.component';
+import { ViewQuizQuestionComponent } from './admin/view-quiz-question/view-quiz-question.component';
 import { ViewQuizesComponent } from './admin/view-quizes/view-quizes.component';
 import { WelcomeComponent } from './admin/welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
@@ -49,6 +51,16 @@ const routes: Routes = [
             {
   path : 'quiz/:id', component : UpdateQuizComponent
             },
+
+            {
+  path : 'view-questions/:id/:titre', component : ViewQuizQuestionComponent
+            },
+
+            {
+  path : 'add-question/:id/:titre', component : AddQuestionComponent
+            },
+
+
           ],
 },
 { path : 'user-dashboard', component : UserDashboardComponent, pathMatch : 'full', canActivate:[NormalGuard]},

@@ -22,16 +22,18 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './admin/welcome/welcome.component';
 import { ViewCategorieComponent } from './admin/view-categorie/view-categorie.component';
 import { AddCategorieComponent } from './admin/add-categorie/add-categorie.component';
 import { ViewQuizesComponent } from './admin/view-quizes/view-quizes.component';
 import { AddQuizComponent } from './admin/add-quiz/add-quiz.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
 import { UpdateQuizComponent } from './admin/update-quiz/update-quiz.component';
+import { ViewQuizQuestionComponent } from './admin/view-quiz-question/view-quiz-question.component';
+import { AddQuestionComponent } from './admin/add-question/add-question.component';
 
 
 
@@ -58,7 +60,9 @@ import { UpdateQuizComponent } from './admin/update-quiz/update-quiz.component';
     AddCategorieComponent,
     ViewQuizesComponent,
     AddQuizComponent,
-    UpdateQuizComponent
+    UpdateQuizComponent,
+    ViewQuizQuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,

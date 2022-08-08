@@ -1,0 +1,40 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1 class="mt20">Examen disponible</h1>
+        <div class="row mt20" *ngIf="quizzes">
+            <div class="col-md-5"*ngFor="let q of quizzes">
+
+              
+                <mat-card class="mb20">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{q.titre}}</mat-card-title>
+                        <mat-card-subtitle>
+                            {{q.categorie.titre}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p class="truncate">{{q.description}}</p>
+                    </mat-card-content>
+               
+                    <button mat-button color="primary">Voir</button>
+                    <button mat-button color="accent">Lancer</button>
+                    <button mat-button color="accent"> Nb° Q:{{q.numberOfQuestion}}</button>
+                    <button mat-button color="accent"> M.M:{{q.numberOfQuestion}}</button>
+
+                </mat-card>
+          
+            </div>
+
+            <div class="col-md-12" *ngIf="quizzes.length ==0">
+                <mat-card>
+                    <mat-card-content>
+                      <h1>Il n'ya pas d'examen dans cette catégorie</h1>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            
+        </div>
+    </div>
+</div>

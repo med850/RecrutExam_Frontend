@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
+import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
 import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
@@ -63,7 +64,14 @@ const routes: Routes = [
 
           ],
 },
-{ path : 'user-dashboard', component : UserDashboardComponent, pathMatch : 'full', canActivate:[NormalGuard]},
+{ path : 'user-dashboard', component : UserDashboardComponent, canActivate:[NormalGuard],
+  children:[{
+        path:':catId',
+        component:LoadQuizComponent, 
+             },
+
+
+]},
 
 
 

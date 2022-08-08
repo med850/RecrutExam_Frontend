@@ -13,11 +13,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './home/home.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashboard.component';
@@ -34,6 +34,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { UpdateQuizComponent } from './admin/update-quiz/update-quiz.component';
 import { ViewQuizQuestionComponent } from './admin/view-quiz-question/view-quiz-question.component';
 import { AddQuestionComponent } from './admin/add-question/add-question.component';
+import { SidebarUserComponent } from './simple-user/sidebar-user/sidebar-user.component';
+import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
 
 
 
@@ -62,7 +64,9 @@ import { AddQuestionComponent } from './admin/add-question/add-question.componen
     AddQuizComponent,
     UpdateQuizComponent,
     ViewQuizQuestionComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    SidebarUserComponent,
+    LoadQuizComponent
   ],
   imports: [
     BrowserModule,

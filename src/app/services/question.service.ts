@@ -18,6 +18,17 @@ export class QuestionService {
   }
 
 
+
+  public getQuestionOfQuizForTest(id:any){
+
+
+    return this.http.get(`${baseUrl}/question/quiz/${id}`);
+
+  }
+
+
+
+
   public addQuestion(question:any){
 
     return this.http.post(`${baseUrl}/question/`, question);

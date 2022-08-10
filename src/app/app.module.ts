@@ -36,6 +36,10 @@ import { ViewQuizQuestionComponent } from './admin/view-quiz-question/view-quiz-
 import { AddQuestionComponent } from './admin/add-question/add-question.component';
 import { SidebarUserComponent } from './simple-user/sidebar-user/sidebar-user.component';
 import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './simple-user/instructions/instructions.component';
+import { StartComponent } from './simple-user/start/start.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 
@@ -66,7 +70,9 @@ import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
     ViewQuizQuestionComponent,
     AddQuestionComponent,
     SidebarUserComponent,
-    LoadQuizComponent
+    LoadQuizComponent,
+    InstructionsComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +90,7 @@ import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
     MatListModule,
     MatSlideToggleModule,
     MatSelectModule,
+    MatProgressBarModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

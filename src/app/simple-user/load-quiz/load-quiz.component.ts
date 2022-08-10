@@ -37,7 +37,7 @@ export class LoadQuizComponent implements OnInit {
       }else{
         console.log('Load specific quiz');
        
-        this.quiz.getActiveQuizzesOfCategorie(this.catId).subscribe(
+        this.quiz.getQuizOfCategorie(this.catId).subscribe(
           (data:any)=>{
             this.quizzes = data;
           },

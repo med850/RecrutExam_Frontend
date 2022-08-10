@@ -1,0 +1,62 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+
+                        <mat-card-title>
+                           Prenez un moment pour lire les questions
+                        </mat-card-title>
+
+                        <mat-card-subtitle>
+                            une autre étape pour commencer...
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content class="ml20">
+
+                        <h1>{{quizz.titre}}</h1>
+
+                        <p>{{quizz.description}}</p>
+
+                        <mat-divider></mat-divider>
+
+                        <br>
+                        <h1>Instruction inportante</h1>
+
+                        <ul>
+                            <li>Le temps limite est <b>{{quizz.numberOfQuestion * 2}} minutes.</b></li>
+                            <li>Tu peut annuler votre condidature en cas de sortir de cet examen.</li>
+                            <li>Il existe <b>{{quizz.numberOfQuestion}} questions.</b></li>
+                            <li>Chaque question a <b>{{quizz.maxMarks/quizz.numberOfQuestion}} points.</b>
+                            <li>Tous les questions sont des Qcm's.</li>
+                        </ul>
+
+                        <mat-divider></mat-divider>
+
+
+                        <br>
+                        <h1>Concernant l'examen</h1>
+
+                        <ul>
+                            <li>Cliquez sur le boutton<b>Commencer</b>.</li>
+                            <li>Le temps va commencer a compter aprés le clique de boutton Commencer</li>
+                            <li>Validez vos réponses par le clique sur le boutton <b>Valider</b>.</li>
+                           
+                        </ul>
+
+
+                    </mat-card-content>
+
+
+                    <div class="text-center">
+                        <button (click)="startQuiz()" [routerLink]="'/start/'+id" mat-raised-button color="primary">Commencer</button>
+                    </div>
+
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

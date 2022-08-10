@@ -15,7 +15,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
+import { InstructionsComponent } from './simple-user/instructions/instructions.component';
 import { LoadQuizComponent } from './simple-user/load-quiz/load-quiz.component';
+import { StartComponent } from './simple-user/start/start.component';
 import { UserDashboardComponent } from './simple-user/user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
@@ -70,9 +72,17 @@ const routes: Routes = [
         component:LoadQuizComponent, 
              },
 
-
+             {
+        path:'instructions/:id',
+        component:InstructionsComponent,
+        canActivate:[NormalGuard], 
+              },
 ]},
 
+{
+  path:'start/:id',
+  component:StartComponent, 
+        },
 
 
 
